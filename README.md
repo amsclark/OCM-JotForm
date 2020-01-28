@@ -5,7 +5,7 @@ JotForm's generic "webhook" integration does not have any ability to send standa
 
 Instructions:
 
-1. php file into the cms/services directory
+1. Drop the php file into the cms/services directory
 2. Edit the block at the top of the file so that instead of saying this:
 ```php
 if ($_GET['key'] != 'authenticationKeyGoesHere'){
