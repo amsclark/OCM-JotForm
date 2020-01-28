@@ -13,6 +13,7 @@ if ($_GET['key'] != 'authenticationKeyGoesHere'){
 }
 ```
 'authenticationKeyGoesHere' is replaced with a long random string.
+
 3. Try accessing the page in a web browser, first with no authentication string and make sure you see "could not authenticate" without any serious errors.
 4. Next try appending ?key='yourLongRandomAuthenticationStringThatYouPickedInStepTwo'. Be forewarned that doing this is probably going to create an empty transfer case that you should delete or reject. You should see a number (the transfer id) in the browser window. It will probably be 1 if you've never transferred a case in before.
 5. Within jotform, create a new integration for a webhook. Don't use your OCM endpoint yet. Use a service like http://ptsv2.com/ or https://postb.in/ first to take a close look at the structure of the json that comes through, including the key names and subkey names. With some JotForm fields, the value may be one level down, but in others it may be two levels. Compare the address fields and the email field in the code in this repository for example.
